@@ -1,0 +1,154 @@
+html {
+    font-size: 120%;
+}
+body {
+    font-family: 'Crimson Text', 'Times New Roman', serif;
+    background-color: #F2FFFC;
+    line-height: 1.5;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+h1 {
+    text-transform: uppercase;
+}
+h2 {
+    clear: both;
+}
+h1, h2 {
+    font-family: 'Open Sans Condensed', 'Arial', sans-serif;
+}
+.titulo-principal {
+    font-size: 300%;
+    text-align: center;
+    color: #FFF;
+    background-color: #851944;
+    padding: 1.25rem;
+    margin: 0;
+    border-bottom: 0.5rem #000 solid; 
+}
+main h2, .navegacao-site h1{
+    font-size: 1.875rem;
+}
+.navegacao-site h1 {
+    margin-bottom: 1.5625rem;
+}
+.navegacao-site {
+    background-color: #3C1D3D;
+    color:#F2FFFC;
+    padding: 1.25rem;
+    text-align: center;
+    clear: right;
+    width: calc(0.7 * 300px);
+    padding-top: 229.33px;
+}
+.navegacao-site, .minha-foto {
+    border-left: #000 0.625rem solid;   
+    box-sizing: border-box;
+}
+.icones-sociais a {
+    position: relative;
+}
+.icones-sociais a:hover::after,
+.icones-sociais a:focus::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 110%;
+    right: 0;
+    text-indent: 0;
+    width: 300%;
+    background: black;
+    font-size: .75em;
+}
+.icones-sociais a:hover::before,
+.icones-sociais a:focus::before {
+    content: '';
+    width: 1em;
+    height: 1em;
+    background-color: black;
+    position: absolute;
+    bottom: -25%;
+    left: 25%;
+    transform: translateY(.5em) rotate(45deg);
+}
+.minha-foto {
+    border-bottom: #000 0.625rem solid;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 17%;
+}
+.navegacao-site a{
+    color:#F2FFFC;
+    text-decoration: none;
+    font-family: 'Open Sans Condensed', 'Arial', sans-serif;
+}
+.container {
+    width: 35rem;
+    margin: auto;
+    padding: 1.875rem, 0;
+    padding-bottom: 5rem;
+    padding-top: 1em;
+}
+p {
+    text-align: justify;
+    margin: 1.25rem, 0px;
+}
+#rodape {
+    background-image: radial-gradient(ellipse at left bottom,
+        rgba(60, 29, 61, 0.8), 
+        rgba(60, 29, 61, 0.8) 65%, 
+        #000 65%,
+        #000 70%,
+        transparent 70%,
+        transparent);
+    background-size: 25%, 100%;
+    background-repeat: no-repeat;
+    color: #000;
+    padding-top: 0.5rem;
+    clear: both;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
+main a {
+    color: #851944;
+}
+.icones-sociais li {
+    display: inline-block;
+}
+.icones-sociais a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-indent: -9999px;
+}
+.github {
+    background-image: url("../imagens/github.png");
+}
+.twitter {
+    background-image: url("../imagens/twitter.png");
+}
+.linkedin {
+    background-image: url("../imagens/linkedin.png");
+}
+main {
+    flex-grow: 1;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+main a:hover,
+main a:focus,
+footer a:hover,
+footer a:focus {
+    color: #FF0000;
+}
+.navegacao-site a:hover,
+.navegacao-site a:focus {
+    text-shadow: 0 0 2px pink;
+}
