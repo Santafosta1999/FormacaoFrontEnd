@@ -1,36 +1,89 @@
-//Classe modelo de lista de negociações
-class ListaNegociacoes {
-    constructor(contexto) {
-        //Inicializa um array vazio
-        this._negociacoes = [];
+"use strict";
+
+System.register([], function (_export, _context) {
+    "use strict";
+
+    var _createClass, ListaNegociacoes;
+
+    function _classCallCheck(instance, Constructor) {
+        if (!(instance instanceof Constructor)) {
+            throw new TypeError("Cannot call a class as a function");
+        }
     }
-    //Recebe uma negociação e insere no array
-    adiciona(negociacao) {
-        this._negociacoes.push(negociacao);
-    }
-    /*Inicializa um array vazio, concatena com o
-    array _negociacoes e realiza o retorno, para
-    evitar o acesso direto ao array _negociacoes*/
-    get negociacoes() {
-        return [].concat(this._negociacoes);
-    }
-    //Esvazia o array _negociacoes
-    esvazia() {
-        this._negociacoes = [];
-    }
-    //Retorna o volume total das negociações
-    get volumeTotal() {
-        /*Atribui 0.0 como valor inicial de total
-        e faz um loop passando pelas negociações e
-        somando volume ao valor anterior de total*/
-        return this._negociacoes.reduce((total, n) => total + n.volume, 0.0);
-    }
-    //Ordena a lista de acordo com o critério(click) do usuário
-    ordena(criterio) {
-        this._negociacoes.sort(criterio);
-    }
-    //Inverte a lista de acordo com o critério(click) do usuário
-    inverteOrdem() {
-        this._negociacoes.reverse();
-    }
-}
+
+    return {
+        setters: [],
+        execute: function () {
+            _createClass = function () {
+                function defineProperties(target, props) {
+                    for (var i = 0; i < props.length; i++) {
+                        var descriptor = props[i];
+                        descriptor.enumerable = descriptor.enumerable || false;
+                        descriptor.configurable = true;
+                        if ("value" in descriptor) descriptor.writable = true;
+                        Object.defineProperty(target, descriptor.key, descriptor);
+                    }
+                }
+
+                return function (Constructor, protoProps, staticProps) {
+                    if (protoProps) defineProperties(Constructor.prototype, protoProps);
+                    if (staticProps) defineProperties(Constructor, staticProps);
+                    return Constructor;
+                };
+            }();
+
+            _export("ListaNegociacoes", ListaNegociacoes = function () {
+                function ListaNegociacoes(contexto) {
+                    _classCallCheck(this, ListaNegociacoes);
+
+                    //Inicializa um array vazio
+                    this._negociacoes = [];
+                }
+                //Recebe uma negociação e insere no array
+
+
+                _createClass(ListaNegociacoes, [{
+                    key: "adiciona",
+                    value: function adiciona(negociacao) {
+                        this._negociacoes.push(negociacao);
+                    }
+                }, {
+                    key: "esvazia",
+                    value: function esvazia() {
+                        this._negociacoes = [];
+                    }
+                }, {
+                    key: "ordena",
+                    value: function ordena(criterio) {
+                        this._negociacoes.sort(criterio);
+                    }
+                }, {
+                    key: "inverteOrdem",
+                    value: function inverteOrdem() {
+                        this._negociacoes.reverse();
+                    }
+                }, {
+                    key: "negociacoes",
+                    get: function get() {
+                        return [].concat(this._negociacoes);
+                    }
+                }, {
+                    key: "volumeTotal",
+                    get: function get() {
+                        /*Atribui 0.0 como valor inicial de total
+                        e faz um loop passando pelas negociações e
+                        somando volume ao valor anterior de total*/
+                        return this._negociacoes.reduce(function (total, n) {
+                            return total + n.volume;
+                        }, 0.0);
+                    }
+                }]);
+
+                return ListaNegociacoes;
+            }());
+
+            _export("ListaNegociacoes", ListaNegociacoes);
+        }
+    };
+});
+//# sourceMappingURL=ListaNegociacoes.js.map

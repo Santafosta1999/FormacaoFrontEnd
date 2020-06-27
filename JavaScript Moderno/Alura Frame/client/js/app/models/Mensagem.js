@@ -1,15 +1,63 @@
-//Classe modelo de mensagem exibida para o usuário
-class Mensagem {
-    contructor(texto) {
-        this._texto = texto || ''; 
-        //Se o texto for undefined assume o valor '', para funcionar no Microsoft Edge
+'use strict';
+
+System.register([], function (_export, _context) {
+    "use strict";
+
+    var _createClass, Mensagem;
+
+    function _classCallCheck(instance, Constructor) {
+        if (!(instance instanceof Constructor)) {
+            throw new TypeError("Cannot call a class as a function");
+        }
     }
-    //Getter para o texto da mensagem
-    get texto() {
-        return this._texto;
-    }
-    //Setter para o texto da mensagem
-    set texto(texto) {
-        this._texto = texto;
-    }
-} 
+
+    return {
+        setters: [],
+        execute: function () {
+            _createClass = function () {
+                function defineProperties(target, props) {
+                    for (var i = 0; i < props.length; i++) {
+                        var descriptor = props[i];
+                        descriptor.enumerable = descriptor.enumerable || false;
+                        descriptor.configurable = true;
+                        if ("value" in descriptor) descriptor.writable = true;
+                        Object.defineProperty(target, descriptor.key, descriptor);
+                    }
+                }
+
+                return function (Constructor, protoProps, staticProps) {
+                    if (protoProps) defineProperties(Constructor.prototype, protoProps);
+                    if (staticProps) defineProperties(Constructor, staticProps);
+                    return Constructor;
+                };
+            }();
+
+            _export('Mensagem', Mensagem = function () {
+                function Mensagem() {
+                    _classCallCheck(this, Mensagem);
+                }
+
+                _createClass(Mensagem, [{
+                    key: 'contructor',
+                    value: function contructor(texto) {
+                        this._texto = texto || '';
+                        //Se o texto for undefined assume o valor '', para funcionar no Microsoft Edge
+                    }
+                }, {
+                    key: 'texto',
+                    get: function get() {
+                        return this._texto;
+                    },
+                    set: function set(texto) {
+                        this._texto = texto;
+                    }
+                }]);
+
+                return Mensagem;
+            }());
+
+            _export('Mensagem', Mensagem);
+        }
+    };
+});
+//# sourceMappingURL=Mensagem.js.map
